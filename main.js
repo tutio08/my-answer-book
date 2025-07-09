@@ -1,34 +1,277 @@
-// 图片列表
+// 图片列表（已全部放在 /压缩完成的图片_副本/ 文件夹下）
 const images = [
-    'pexels-creative-vix-9754.jpg',
-    'pexels-joyston-judah-331625-933054.jpg',
-    'pexels-packermann-1666012.jpg'
-];
-
-// 文字内容
+    "压缩完成的图片_副本/pexels-tracehudson-2365457.jpg",
+    "压缩完成的图片_副本/pexels-jean-christophe-andre-1336424-2574997.jpg",
+    "压缩完成的图片_副本/pexels-gabby-k-20419115.jpg",
+    "压缩完成的图片_副本/pexels-anastasia-shuraeva-6014733.jpg",
+    "压缩完成的图片_副本/pexels-sunsetoned-5913193.jpg",
+    "压缩完成的图片_副本/pexels-gabby-k-20431486.jpg",
+    "压缩完成的图片_副本/pexels-cristian-rojas-8391652.jpg",
+    "压缩完成的图片_副本/pexels-gabby-k-20431489.jpg",
+    "压缩完成的图片_副本/pexels-gabby-k-20419194.jpg",
+    "压缩完成的图片_副本/pexels-arina-krasnikova-6998579.jpg",
+    "压缩完成的图片_副本/pexels-ekaterina-bolovtsova-6766458.jpg",
+    "压缩完成的图片_副本/pexels-mikhail-nilov-6944351.jpg",
+    "压缩完成的图片_副本/pexels-ekaterina-bolovtsova-6766454.jpg",
+    "压缩完成的图片_副本/pexels-manfred-legasto-francisco-598911-1557848.jpg",
+    "压缩完成的图片_副本/pexels-ekamelev-813870.jpg",
+    "压缩完成的图片_副本/pexels-obviouslyarthur-1252893.jpg",
+    "压缩完成的图片_副本/pexels-didsss-2932089.jpg",
+    "压缩完成的图片_副本/pexels-lilartsy-1540321.jpg",
+    "压缩完成的图片_副本/pexels-aeppli-2828554.jpg",
+    "压缩完成的图片_副本/pexels-arts-1547815.jpg",
+    "压缩完成的图片_副本/pexels-connor-danylenko-534256-1414535.jpg",
+    "压缩完成的图片_副本/pexels-cristian-rojas-7947792.jpg",
+    "压缩完成的图片_副本/pexels-danielle-rangel-342268-3363674.jpg",
+    "压缩完成的图片_副本/pexels-eberhardgross-2437299.jpg",
+    "压缩完成的图片_副本/pexels-ekaterina-bolovtsova-6766514.jpg",
+    "压缩完成的图片_副本/pexels-ekaterina-bolovtsova-7445007.jpg",
+    "压缩完成的图片_副本/pexels-innature-1032814.jpg",
+    "压缩完成的图片_副本/pexels-jani-tisler-526626-1313399.jpg",
+    "压缩完成的图片_副本/pexels-jonastogo-2648337.jpg",
+    "压缩完成的图片_副本/pexels-kaip-1056670.jpg",
+    "压缩完成的图片_副本/pexels-lilartsy-3050829.jpg",
+    "压缩完成的图片_副本/pexels-mikhail-nilov-6944357.jpg",
+    "压缩完成的图片_副本/pexels-monstera-3611406.jpg",
+    "压缩完成的图片_副本/pexels-orange-ocean-243774902-32920052.jpg",
+    "压缩完成的图片_副本/pexels-pixabay-237272.jpg",
+    "压缩完成的图片_副本/pexels-pixabay-314958.jpg",
+    "压缩完成的图片_副本/pexels-pixabay-33109.jpg",
+    "压缩完成的图片_副本/pexels-rdne-5875024.jpg",
+    "压缩完成的图片_副本/pexels-rdne-6806399.jpg",
+    "压缩完成的图片_副本/pexels-rdne-6806421.jpg",
+    "压缩完成的图片_副本/pexels-tdcat-59321.jpg",
+    "压缩完成的图片_副本/pexels-pixabay-261292.jpg",
+    "压缩完成的图片_副本/pexels-sebastian-palomino-933481-1955134.jpg",
+    "压缩完成的图片_副本/pexels-thais-araujo-808424-1681147.jpg",
+    "压缩完成的图片_副本/pexels-tima-miroshnichenko-5988915.jpg",
+    "压缩完成的图片_副本/pexels-victorfreitas-1072842.jpg",
+    "压缩完成的图片_副本/pexels-elly-fairytale-3865676.jpg",
+    "压缩完成的图片_副本/pexels-japy-1563604.jpg",
+    "压缩完成的图片_副本/pexels-japy-1928491.jpg",
+    "压缩完成的图片_副本/pexels-jonas-horsch-102497290-32893878.jpg",
+    "压缩完成的图片_副本/pexels-lily-lili-17626726-32928703.jpg",
+    "压缩完成的图片_副本/pexels-lukebarky-2407128.jpg",
+    "压缩完成的图片_副本/pexels-mikhail-nilov-6931886.jpg",
+    "压缩完成的图片_副本/pexels-obviouslyarthur-1296265.jpg",
+    "压缩完成的图片_副本/pexels-ollivves-931018.jpg",
+    "压缩完成的图片_副本/pexels-peterfazekas-905690.jpg",
+    "压缩完成的图片_副本/pexels-adonyi-foto-1558916.jpg",
+    "压缩完成的图片_副本/pexels-alexazabache-3214944.jpg",
+    "压缩完成的图片_副本/pexels-anastasia-shuraeva-6014735.jpg",
+    "压缩完成的图片_副本/pexels-andy-dufresne-1782800-15722322.jpg",
+    "压缩完成的图片_副本/pexels-athena-1586795.jpg",
+    "压缩完成的图片_副本/pexels-berend-1452701.jpg",
+    "压缩完成的图片_副本/pexels-bertellifotografia-2868224.jpg",
+    "压缩完成的图片_副本/pexels-blitzboy-895501.jpg",
+    "压缩完成的图片_副本/pexels-castorlystock-3725743.jpg",
+    "压缩完成的图片_副本/pexels-chris-liu-753004655-23021463.jpg",
+    "压缩完成的图片_副本/pexels-cristian-rojas-7947796.jpg",
+    "压缩完成的图片_副本/pexels-ekaterina-bolovtsova-6766259.jpg",
+    "压缩完成的图片_副本/pexels-ekaterina-bolovtsova-6766266.jpg",
+    "压缩完成的图片_副本/pexels-kovyrina-10180294.jpg",
+    "压缩完成的图片_副本/pexels-mikhail-nilov-6932085.jpg",
+    "压缩完成的图片_副本/pexels-rdne-6806443.jpg",
+    "压缩完成的图片_副本/pexels-steve-2179374.jpg",
+    "压缩完成的图片_副本/pexels-anastasia-shuraeva-6015518.jpg",
+    "压缩完成的图片_副本/pexels-blitzboy-902204.jpg",
+    "压缩完成的图片_副本/pexels-ekaterina-bolovtsova-6766254.jpg",
+    "压缩完成的图片_副本/pexels-gabby-k-20419148.jpg",
+    "压缩完成的图片_副本/pexels-kevin-blanzy-440998-1130692.jpg",
+    "压缩完成的图片_副本/pexels-pixabay-235990.jpg",
+    "压缩完成的图片_副本/pexels-pixabay-267559.jpg",
+    "压缩完成的图片_副本/pexels-pixabay-273886.jpg",
+    "压缩完成的图片_副本/pexels-pixabay-326168.jpg",
+    "压缩完成的图片_副本/pexels-pixabay-415571.jpg",
+    "压缩完成的图片_副本/pexels-rakicevic-nenad-233369-1262304.jpg",
+    "压缩完成的图片_副本/pexels-roman-odintsov-4555779.jpg",
+    "压缩完成的图片_副本/pexels-sebastian-189349.jpg",
+    "压缩完成的图片_副本/pexels-simon73-1323550.jpg",
+    "压缩完成的图片_副本/pexels-simon73-953241.jpg",
+    "压缩完成的图片_副本/pexels-taryn-elliott-3889928.jpg",
+    "压缩完成的图片_副本/pexels-unknown6user-1646753.jpg",
+    "压缩完成的图片_副本/pexels-kellie-churchman-371878-1001682.jpg",
+    "压缩完成的图片_副本/pexels-kovyrina-1600139.jpg",
+    "压缩完成的图片_副本/pexels-lastly-937783.jpg",
+    "压缩完成的图片_副本/pexels-lilartsy-1041103.jpg",
+    "压缩完成的图片_副本/pexels-michael-morse-1533907.jpg",
+    "压缩完成的图片_副本/pexels-mohamedelaminemsiouri-2097442.jpg",
+    "压缩完成的图片_副本/pexels-nout-gons-80280-248159.jpg",
+    "压缩完成的图片_副本/pexels-ollivves-1078981.jpg",
+    "压缩完成的图片_副本/pexels-olly-800323.jpg",
+    "压缩完成的图片_副本/pexels-ozgomz-2893685.jpg"
+  ];
+  
+// 128句中文短句
 const quotes = [
-    { chapter: '静谧时刻', quote: '保持耐心' },
-    { chapter: '山间絮语', quote: '顺其自然' },
-    { chapter: '云端启示', quote: '相信自己' },
-    { chapter: '晨曦絮语', quote: '等待时机' },
-    { chapter: '远方回响', quote: '勇敢表达' },
-    { chapter: '山巅之问', quote: '改变角度' },
-    { chapter: '雾里探索', quote: '依赖直觉' },
-    { chapter: '云雾之间', quote: '静观其变' }
-];
-
-// 页面加载时随机选择内容
-function updateContent() {
+    "千万别在这上面押宝",
+    "采取一个大胆的态度",
+    "听取专家的意见",
+    "你会发现你自己无法妥协",
+    "专注在你的生活上吧",
+    "研究然后享受它",
+    "当然",
+    "它将无法预测",
+    "绝对不",
+    "带着好奇心去探索它",
+    "最好等等看",
+    "它好像是确定的",
+    "趁早做",
+    "对别人保密",
+    "可能会发生一些令人吃惊的事",
+    "答案可能会以另一种形式来到你身边",
+    "你需要适当调整一下",
+    "怀疑它",
+    "它将带来好运",
+    "要有点耐心",
+    "你会发现你所需要知道的一切",
+    "会有另一种情况",
+    "你将会很开心你这样做了",
+    "把它写下来",
+    "千万别陷入你的个人感情",
+    "改变你的焦点",
+    "这时候非常不顺利",
+    "用任何你能做到的方式去提升",
+    "如果你照你说的做",
+    "如果不是就再也不要做它了",
+    "这个时候不要要求更多",
+    "避开第一个解决方案",
+    "观察看看会发生什么事",
+    "它会影响到其他人怎么看你",
+    "你会说了算",
+    "以一个更加轻松的速度进行吧",
+    "最好的解决方法可能不是显而易见的",
+    "保持灵活性",
+    "这不是你所能控制的",
+    "假如你说谢谢",
+    "享受体验",
+    "谨慎地处理",
+    "注意细节",
+    "当你要去做的时候小心行事",
+    "毫无保留的把它说出来",
+    "不要犹豫了",
+    "它有着非常重要的意义",
+    "更换一下重要事项的优先顺序",
+    "这是一个做新计划的最好时机了",
+    "继续前进",
+    "列个为什么不要做的清单",
+    "不要等待",
+    "它将是你无法忘怀的事",
+    "找出更多的选择",
+    "履行你自己的义务",
+    "稍后处理它",
+    "跟随其他人的指引",
+    "做一个为什么的清单",
+    "冒险一试",
+    "接受你习惯的改变",
+    "你需要采取主动",
+    "这可保证不了",
+    "情况将会转变的非常快",
+    "你将不得不妥协",
+    "你需要更多的信息",
+    "相信你最起初的想法",
+    "它将引起一场轰动",
+    "可能会发生一些令人吃惊的事作为结局",
+    "它将会带来好运",
+    "灾难是极有可能的",
+    "迫切要求终止",
+    "太多的选择难于太少",
+    "是的",
+    "更加仔细地聆听然后你将会知道",
+    "答案就在你身边",
+    "让它过去吧",
+    "那将会是一种金钱的浪费",
+    "全力以赴",
+    "不要真正在意",
+    "你需要考虑考虑其他方式",
+    "从现在起的一年都没有什么所谓",
+    "不要浪费你的时间了",
+    "他可能是非凡的",
+    "数到10再问一次",
+    "装作它已经是真的了",
+    "布置优先次序是必须的部分",
+    "运用你的想象",
+    "他一定会很好",
+    "镇定下来 确保最好的决定",
+    "等待",
+    "当你行动的时候你将需要不断弥补",
+    "一笑置之",
+    "别人也同样取决于你的选择",
+    "你将会后悔的",
+    "无可非议",
+    "当然",
+    "你知道现在比以前更好了",
+    "相信你的直觉",
+    "考虑到它的机会",
+    "问问你的母亲",
+    "可能当你老的时候",
+    "只能做一次",
+    "可能",
+    "千万别在这上面押宝",
+    "采取一个大胆的态度",
+    "不行",
+    "行",
+    "你的行动将会改善一切",
+    "别傻了",
+    "千万别在这上面押宝",
+    "采取一个大胆的态度",
+    "听取专家的意见",
+    "你会发现你自己无法妥协",
+    "专注在你的生活上吧",
+    "研究然后享受它",
+    "当然",
+    "他仍将无法预测",
+    "绝对不",
+    "带着好奇心去探索它",
+    "欣然地确定它",
+    "最好等等看",
+    "对别人保密",
+    "可能会发生一些令人吃惊的事",
+    "问问你的父亲",
+    "绝不",
+    "答案可能会以另一种形式来到你身边",
+    "你将需要适当调整一下",
+    "怀疑它"
+  ];
+  
+  // 随机选取图片和短句
+  function updateContent() {
     const img = images[Math.floor(Math.random() * images.length)];
-    const item = quotes[Math.floor(Math.random() * quotes.length)];
-    const bg = document.getElementById('bg');
-    bg.style.backgroundImage = `url('${img}')`;
-    document.getElementById('chapter').textContent = item.chapter;
-    document.getElementById('quote').textContent = `\"${item.quote}\"`;
-}
-
-// 初始化页面
-updateContent();
-
-// 点击页面任意位置更新内容
-document.body.addEventListener('click', updateContent);
+    const quote = quotes[Math.floor(Math.random() * quotes.length)];
+    document.getElementById('bg').style.backgroundImage = `url('${img}')`;
+    document.getElementById('quote').textContent = `“ ${quote} ”`;
+  }
+  
+  // 时间戳格式化
+  function formatTimestamp(date) {
+    const months = [
+      "January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"
+    ];
+    const day = date.getDate();
+    const month = months[date.getMonth()];
+    const hour = date.getHours();
+    const minute = date.getMinutes().toString().padStart(2, '0');
+    const ampm = hour >= 12 ? 'p.m.' : 'a.m.';
+    const hour12 = hour % 12 === 0 ? 12 : hour % 12;
+    // 英文序数
+    function getOrdinal(n) {
+      if (n > 3 && n < 21) return 'th';
+      switch (n % 10) {
+        case 1: return 'st';
+        case 2: return 'nd';
+        case 3: return 'rd';
+        default: return 'th';
+      }
+    }
+    return `${month} ${day}${getOrdinal(day)}  ${hour12}:${minute} ${ampm}`;
+  }
+  
+  // 初始化
+  updateContent();
+  document.getElementById('timestamp').textContent = formatTimestamp(new Date());
+  
+  document.body.addEventListener('click', () => {
+    updateContent();
+    document.getElementById('timestamp').textContent = formatTimestamp(new Date());
+  });
