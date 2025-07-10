@@ -7,14 +7,13 @@ html, body {
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
-  background-color: #000;
-  /* 适配安全区 */
-  padding-top: env(safe-area-inset-top);
-  padding-bottom: env(safe-area-inset-bottom);
+  min-height: 100vh;
+  box-sizing: border-box;
+  /* 兼容旧版 iOS */
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-top: constant(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  padding-bottom: constant(safe-area-inset-bottom, 0px);
 }
 
 #bg {
@@ -28,8 +27,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transition: background-image 0.8s ease;
   z-index: 1;
+  transition: background-image 0.5s ease;
 }
 
 .content {
