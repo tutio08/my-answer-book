@@ -101,45 +101,6 @@ const images = [
   "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-olly-800323.jpg",
   "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-ozgomz-2893685.jpg"
 ];
-
-
-// 随机抽取n张图片
-function getRandomImages(arr, n) {
-  const result = [];
-  const used = new Set();
-  while (result.length < n && result.length < arr.length) {
-    const idx = Math.floor(Math.random() * arr.length);
-    if (!used.has(idx)) {
-      result.push(arr[idx]);
-      used.add(idx);
-    }
-  }
-  return result;
-}
-
-// 页面加载时只抽取30张
-const sessionImages = getRandomImages(images, 30);
-
-// 后续所有展示、切换都用 sessionImages
-let currentImageIndex = 0;
-
-function updateContent() {
-  const img = sessionImages[currentImageIndex];
-  const quote = quotes[Math.floor(Math.random() * quotes.length)];
-  document.getElementById('bg').style.backgroundImage = `url('${img}')`;
-  document.getElementById('quote').textContent = `“ ${quote} ”`;
-  // 预加载下一张
-  const nextIndex = (currentImageIndex + 1) % sessionImages.length;
-  const preloadImg = new Image();
-  preloadImg.src = sessionImages[nextIndex];
-}
-
-document.body.addEventListener('click', () => {
-  currentImageIndex = (currentImageIndex + 1) % sessionImages.length;
-  updateContent();
-});
-
-updateContent();
   
 // 128句中文短句
 const quotes = [
@@ -158,7 +119,7 @@ const quotes = [
     "趁早做",
     "对别人保密",
     "可能会发生一些令人吃惊的事",
-    "答案可能会以另一种形式来到你身边",
+    "答案会以另一种形式来到你身边",
     "你需要适当调整一下",
     "怀疑它",
     "它将带来好运",
@@ -179,7 +140,7 @@ const quotes = [
     "它会影响到其他人怎么看你",
     "你会说了算",
     "以一个更加轻松的速度进行吧",
-    "最好的解决方法可能不是显而易见的",
+    "最好的解决方法不是显而易见的",
     "保持灵活性",
     "这不是你所能控制的",
     "假如你说谢谢",
@@ -210,20 +171,20 @@ const quotes = [
     "你需要更多的信息",
     "相信你最起初的想法",
     "它将引起一场轰动",
-    "可能会发生一些令人吃惊的事作为结局",
+    "可能会发生一些令人吃惊的事",
     "它将会带来好运",
     "灾难是极有可能的",
     "迫切要求终止",
     "太多的选择难于太少",
     "是的",
-    "更加仔细地聆听然后你将会知道",
+    "仔细地聆听然后你将会知道",
     "答案就在你身边",
     "让它过去吧",
     "那将会是一种金钱的浪费",
     "全力以赴",
     "不要真正在意",
     "你需要考虑考虑其他方式",
-    "从现在起的一年都没有什么所谓",
+    "从现在起的一年都没有所谓",
     "不要浪费你的时间了",
     "他可能是非凡的",
     "数到10再问一次",
@@ -233,7 +194,7 @@ const quotes = [
     "他一定会很好",
     "镇定下来 确保最好的决定",
     "等待",
-    "当你行动的时候你将需要不断弥补",
+    "当你行动时你将需要不断弥补",
     "一笑置之",
     "别人也同样取决于你的选择",
     "你将会后悔的",
@@ -268,7 +229,7 @@ const quotes = [
     "可能会发生一些令人吃惊的事",
     "问问你的父亲",
     "绝不",
-    "答案可能会以另一种形式来到你身边",
+    "答案会以另一种形式来到你身边",
     "你将需要适当调整一下",
     "怀疑它"
   ];
@@ -280,6 +241,9 @@ const quotes = [
     document.getElementById('bg').style.backgroundImage = `url('${img}')`;
     document.getElementById('quote').textContent = `“ ${quote} ”`;
   }
+
+ // 初始化时只显示一次
+showRandomContent();
   
   // 时间戳格式化
   function formatTimestamp(date) {
@@ -310,7 +274,3 @@ const quotes = [
   updateContent();
   document.getElementById('timestamp').textContent = formatTimestamp(new Date());
   
-  document.body.addEventListener('click', () => {
-    updateContent();
-    document.getElementById('timestamp').textContent = formatTimestamp(new Date());
-  });
