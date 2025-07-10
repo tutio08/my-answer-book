@@ -101,6 +101,45 @@ const images = [
   "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-olly-800323.jpg",
   "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-ozgomz-2893685.jpg"
 ];
+
+
+// 随机抽取n张图片
+function getRandomImages(arr, n) {
+  const result = [];
+  const used = new Set();
+  while (result.length < n && result.length < arr.length) {
+    const idx = Math.floor(Math.random() * arr.length);
+    if (!used.has(idx)) {
+      result.push(arr[idx]);
+      used.add(idx);
+    }
+  }
+  return result;
+}
+
+// 页面加载时只抽取30张
+const sessionImages = getRandomImages(images, 30);
+
+// 后续所有展示、切换都用 sessionImages
+let currentImageIndex = 0;
+
+function updateContent() {
+  const img = sessionImages[currentImageIndex];
+  const quote = quotes[Math.floor(Math.random() * quotes.length)];
+  document.getElementById('bg').style.backgroundImage = `url('${img}')`;
+  document.getElementById('quote').textContent = `“ ${quote} ”`;
+  // 预加载下一张
+  const nextIndex = (currentImageIndex + 1) % sessionImages.length;
+  const preloadImg = new Image();
+  preloadImg.src = sessionImages[nextIndex];
+}
+
+document.body.addEventListener('click', () => {
+  currentImageIndex = (currentImageIndex + 1) % sessionImages.length;
+  updateContent();
+});
+
+updateContent();
   
 // 128句中文短句
 const quotes = [
