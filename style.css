@@ -85,14 +85,15 @@ body {
   .quote {
     font-size: 1.3rem;
     margin-top: 28vh;
+    font-weight: bold;
   }
   .timestamp {
     font-size: 1rem;
-    bottom: 38vh;
+    bottom: 32vh;
     font-family: 'Times New Roman', Times, serif;
   }
   .logo {
-    height: 70px;
+    height: 40px;
     bottom: 18vh;
   }
 }
