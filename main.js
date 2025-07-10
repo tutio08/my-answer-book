@@ -1,35 +1,105 @@
-// 图片列表（已使用cdn资源）
+// 图片对象数组，已自动生成
 const images = [
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-ekaterina-bolovtsova-7445007.jpg",
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-jani-tisler-526626-1313399.jpg",
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-rdne-5875024.jpg",
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-pixabay-273886.jpg",
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-pixabay-326168.jpg",
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-arts-1547815.jpg",
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-eberhardgross-2437299.jpg",
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-blitzboy-895501.jpg",
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-monstera-3611406.jpg",
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-pixabay-415571.jpg",
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-sebastian-189349.jpg",
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-aeppli-2828554.jpg",
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-kaip-1056670.jpg",
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-lilartsy-3050829.jpg",
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-pixabay-314958.jpg",
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-pixabay-237272.jpg",
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-didsss-2932089.jpg",
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-pixabay-235990.jpg",
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-connor-danylenko-534256-1414535.jpg",
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-lukebarky-2407128.jpg",
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-blitzboy-902204.jpg",
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-kovyrina-1600139.jpg",
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-danielle-rangel-342268-3363674.jpg",
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-tdcat-59321.jpg",
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-unknown6user-1646753.jpg",
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-cristian-rojas-7947792.jpg",
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-arina-krasnikova-6998579.jpg",
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-innature-1032814.jpg",
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-ekamelev-813870.jpg",
-  "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-jonastogo-2648337.jpg"
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-tracehudson-2365457.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-tracehudson-2365457-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-jean-christophe-andre-1336424-2574997.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-jean-christophe-andre-1336424-2574997-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-gabby-k-20419115.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-gabby-k-20419115-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-anastasia-shuraeva-6014733.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-anastasia-shuraeva-6014733-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-sunsetoned-5913193.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-sunsetoned-5913193-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-gabby-k-20431486.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-gabby-k-20431486-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-cristian-rojas-8391652.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-cristian-rojas-8391652-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-gabby-k-20431489.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-gabby-k-20431489-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-gabby-k-20419194.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-gabby-k-20419194-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-arina-krasnikova-6998579.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-arina-krasnikova-6998579-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-ekaterina-bolovtsova-6766458.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-ekaterina-bolovtsova-6766458-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-mikhail-nilov-6944351.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-mikhail-nilov-6944351-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-ekaterina-bolovtsova-6766454.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-ekaterina-bolovtsova-6766454-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-manfred-legasto-francisco-598911-1557848.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-manfred-legasto-francisco-598911-1557848-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-ekamelev-813870.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-ekamelev-813870-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-obviouslyarthur-1252893.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-obviouslyarthur-1252893-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-didsss-2932089.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-didsss-2932089-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-lilartsy-1540321.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-lilartsy-1540321-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-aeppli-2828554.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-aeppli-2828554-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-arts-1547815.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-arts-1547815-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-connor-danylenko-534256-1414535.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-connor-danylenko-534256-1414535-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-cristian-rojas-7947792.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-cristian-rojas-7947792-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-danielle-rangel-342268-3363674.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-danielle-rangel-342268-3363674-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-eberhardgross-2437299.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-eberhardgross-2437299-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-ekaterina-bolovtsova-6766514.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-ekaterina-bolovtsova-6766514-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-ekaterina-bolovtsova-7445007.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-ekaterina-bolovtsova-7445007-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-innature-1032814.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-innature-1032814-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-jani-tisler-526626-1313399.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-jani-tisler-526626-1313399-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-jonastogo-2648337.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-jonastogo-2648337-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-kaip-1056670.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-kaip-1056670-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-lilartsy-3050829.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-lilartsy-3050829-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-mikhail-nilov-6944357.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-mikhail-nilov-6944357-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-monstera-3611406.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-monstera-3611406-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-orange-ocean-243774902-32920052.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-orange-ocean-243774902-32920052-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-pixabay-237272.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-pixabay-237272-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-pixabay-314958.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-pixabay-314958-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-pixabay-33109.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-pixabay-33109-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-rdne-5875024.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-rdne-5875024-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-rdne-6806399.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-rdne-6806399-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-rdne-6806421.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-rdne-6806421-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-tdcat-59321.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-tdcat-59321-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-pixabay-261292.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-pixabay-261292-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-sebastian-palomino-933481-1955134.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-sebastian-palomino-933481-1955134-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-thais-araujo-808424-1681147.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-thais-araujo-808424-1681147-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-tima-miroshnichenko-5988915.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-tima-miroshnichenko-5988915-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-victorfreitas-1072842.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-victorfreitas-1072842-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-elly-fairytale-3865676.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-elly-fairytale-3865676-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-japy-1563604.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-japy-1563604-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-japy-1928491.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-japy-1928491-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-jonas-horsch-102497290-32893878.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-jonas-horsch-102497290-32893878-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-lily-lili-17626726-32928703.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-lily-lili-17626726-32928703-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-lukebarky-2407128.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-lukebarky-2407128-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-mikhail-nilov-6931886.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-mikhail-nilov-6931886-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-obviouslyarthur-1296265.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-obviouslyarthur-1296265-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-ollivves-931018.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-ollivves-931018-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-peterfazekas-905690.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-peterfazekas-905690-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-adonyi-foto-1558916.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-adonyi-foto-1558916-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-alexazabache-3214944.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-alexazabache-3214944-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-anastasia-shuraeva-6014735.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-anastasia-shuraeva-6014735-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-andy-dufresne-1782800-15722322.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-andy-dufresne-1782800-15722322-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-athena-1586795.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-athena-1586795-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-berend-1452701.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-berend-1452701-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-bertellifotografia-2868224.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-bertellifotografia-2868224-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-blitzboy-895501.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-blitzboy-895501-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-castorlystock-3725743.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-castorlystock-3725743-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-chris-liu-753004655-23021463.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-chris-liu-753004655-23021463-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-cristian-rojas-7947796.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-cristian-rojas-7947796-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-ekaterina-bolovtsova-6766259.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-ekaterina-bolovtsova-6766259-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-ekaterina-bolovtsova-6766266.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-ekaterina-bolovtsova-6766266-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-kovyrina-10180294.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-kovyrina-10180294-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-mikhail-nilov-6932085.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-mikhail-nilov-6932085-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-rdne-6806443.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-rdne-6806443-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-steve-2179374.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-steve-2179374-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-anastasia-shuraeva-6015518.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-anastasia-shuraeva-6015518-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-blitzboy-902204.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-blitzboy-902204-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-ekaterina-bolovtsova-6766254.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-ekaterina-bolovtsova-6766254-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-gabby-k-20419148.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-gabby-k-20419148-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-kevin-blanzy-440998-1130692.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-kevin-blanzy-440998-1130692-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-pixabay-235990.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-pixabay-235990-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-pixabay-267559.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-pixabay-267559-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-pixabay-273886.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-pixabay-273886-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-pixabay-326168.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-pixabay-326168-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-pixabay-415571.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-pixabay-415571-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-rakicevic-nenad-233369-1262304.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-rakicevic-nenad-233369-1262304-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-roman-odintsov-4555779.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-roman-odintsov-4555779-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-sebastian-189349.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-sebastian-189349-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-simon73-1323550.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-simon73-1323550-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-simon73-953241.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-simon73-953241-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-taryn-elliott-3889928.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-taryn-elliott-3889928-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-unknown6user-1646753.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-unknown6user-1646753-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-kellie-churchman-371878-1001682.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-kellie-churchman-371878-1001682-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-kovyrina-1600139.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-kovyrina-1600139-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-lastly-937783.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-lastly-937783-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-lilartsy-1041103.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-lilartsy-1041103-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-michael-morse-1533907.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-michael-morse-1533907-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-mohamedelaminemsiouri-2097442.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-mohamedelaminemsiouri-2097442-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-nout-gons-80280-248159.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-nout-gons-80280-248159-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-ollivves-1078981.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-ollivves-1078981-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-olly-800323.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-olly-800323-blur.webp" },
+  { full: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-ozgomz-2893685.webp", blur: "https://cdn.jsdelivr.net/gh/tutio08/my-answer-book/pexels-ozgomz-2893685-blur.webp" }
 ];
   
 // 128句中文短句
@@ -162,11 +232,24 @@ const quotes = [
     "你将需要适当调整一下",
   ];
   
-// 随机选取图片和短句
 function updateContent() {
-  const img = images[Math.floor(Math.random() * images.length)];
+  const imgObj = images[Math.floor(Math.random() * images.length)];
   const quote = quotes[Math.floor(Math.random() * quotes.length)];
-  document.getElementById('bg').style.backgroundImage = `url('${img}')`;
+  const bg = document.getElementById('bg');
+  const blurImg = imgObj.blur;
+  const fullImg = imgObj.full;
+
+  // 先显示模糊图
+  bg.style.backgroundImage = `url('${blurImg}')`;
+  bg.style.transition = 'background-image 0.5s ease';
+
+  // 预加载高清图，加载完成后再切换
+  const img = new Image();
+  img.src = fullImg;
+  img.onload = () => {
+    bg.style.backgroundImage = `url('${fullImg}')`;
+  };
+
   document.getElementById('quote').textContent = `“ ${quote} ”`;
 }
 
