@@ -234,43 +234,39 @@ const quotes = [
     "怀疑它"
   ];
   
-  // 随机选取图片和短句
-  function updateContent() {
-    const img = images[Math.floor(Math.random() * images.length)];
-    const quote = quotes[Math.floor(Math.random() * quotes.length)];
-    document.getElementById('bg').style.backgroundImage = `url('${img}')`;
-    document.getElementById('quote').textContent = `“ ${quote} ”`;
-  }
+// 随机选取图片和短句
+function updateContent() {
+  const img = images[Math.floor(Math.random() * images.length)];
+  const quote = quotes[Math.floor(Math.random() * quotes.length)];
+  document.getElementById('bg').style.backgroundImage = `url('${img}')`;
+  document.getElementById('quote').textContent = `“ ${quote} ”`;
+}
 
- // 初始化时只显示一次
-showRandomContent();
-  
-  // 时间戳格式化
-  function formatTimestamp(date) {
-    const months = [
-      "January", "February", "March", "April", "May", "June",
-      "July", "August", "September", "October", "November", "December"
-    ];
-    const day = date.getDate();
-    const month = months[date.getMonth()];
-    const hour = date.getHours();
-    const minute = date.getMinutes().toString().padStart(2, '0');
-    const ampm = hour >= 12 ? 'p.m.' : 'a.m.';
-    const hour12 = hour % 12 === 0 ? 12 : hour % 12;
-    // 英文序数
-    function getOrdinal(n) {
-      if (n > 3 && n < 21) return 'th';
-      switch (n % 10) {
-        case 1: return 'st';
-        case 2: return 'nd';
-        case 3: return 'rd';
-        default: return 'th';
-      }
+// 时间戳格式化
+function formatTimestamp(date) {
+  const months = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+  const day = date.getDate();
+  const month = months[date.getMonth()];
+  const hour = date.getHours();
+  const minute = date.getMinutes().toString().padStart(2, '0');
+  const ampm = hour >= 12 ? 'p.m.' : 'a.m.';
+  const hour12 = hour % 12 === 0 ? 12 : hour % 12;
+  function getOrdinal(n) {
+    if (n > 3 && n < 21) return 'th';
+    switch (n % 10) {
+      case 1: return 'st';
+      case 2: return 'nd';
+      case 3: return 'rd';
+      default: return 'th';
     }
-    return `${month} ${day}${getOrdinal(day)}  ${hour12}:${minute} ${ampm}`;
   }
-  
-  // 初始化
-  updateContent();
-  document.getElementById('timestamp').textContent = formatTimestamp(new Date());
+  return `${month} ${day}${getOrdinal(day)}  ${hour12}:${minute} ${ampm}`;
+}
+
+// 初始化
+updateContent();
+document.getElementById('timestamp').textContent = formatTimestamp(new Date());
   
