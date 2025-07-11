@@ -108,3 +108,9 @@ body {
     bottom: 18vh;
   }
 }
+
+.quote.en {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  letter-spacing: 0.08em; /* 可选，让英文更美观 */
+}
