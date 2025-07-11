@@ -544,7 +544,7 @@ const images = [
     "The answer will find you in a different form."
   ]
   };
-    // 修改后的 updateContent 函数，支持根据浏览器语言自动切换中英文
+  // 修改后的 updateContent 函数，支持根据浏览器语言自动切换中英文
   async function updateContent() {
     const imgObj = images[Math.floor(Math.random() * images.length)];
     const bg = document.getElementById('bg');
@@ -567,12 +567,19 @@ const images = [
     const selectedQuotes = useChinese ? quotes.zh : quotes.en;
     // 随机选择一条语录
     const quote = selectedQuotes[Math.floor(Math.random() * selectedQuotes.length)];
+    // 获取quote元素
+    const quoteDiv = document.getElementById('quote');
     // 显示语录
-    document.getElementById('quote').textContent = `" ${quote} "`;
+    quoteDiv.textContent = `" ${quote} "`;
+    // 英文时加en类，中文时移除en类
+    if (!useChinese) {
+      quoteDiv.classList.add('en');
+    } else {
+      quoteDiv.classList.remove('en');
+    }
     // 调试信息（可选）
     console.log(`浏览器语言: ${navigator.language}, 使用语言: ${useChinese ? '中文' : '英文'}`);
   }
-  
   // 时间戳格式化
   function formatTimestamp(date) {
     const months = [
