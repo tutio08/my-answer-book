@@ -1,21 +1,8 @@
-// 获取用户国家代码的函数
-async function getUserCountry() {
-  try {
-    // 使用 ip-api.com 获取用户地理位置信息，免费且无需注册
-    const response = await fetch('https://ip-api.com/json/?fields=countryCode');
-    const data = await response.json();
-    return data.countryCode; // 返回国家代码，如 'CN', 'US', 'JP' 等
-  } catch (error) {
-    console.log('获取地理位置失败，默认使用英文:', error);
-    return null; // 获取失败时返回 null
-  }
-}
-
-// 根据国家代码判断是否使用中文
-function shouldUseChinese(countryCode) {
-  // 中国大陆、香港、澳门、台湾使用中文
-  const chineseRegions = ['CN', 'HK', 'MO', 'TW'];
-  return chineseRegions.includes(countryCode);
+// 获取用户首选语言，判断是否为中文
+function shouldUseChineseByLang() {
+  const lang = navigator.language || navigator.userLanguage;
+  // 只要以zh开头都认为是中文（如zh-CN, zh-TW, zh-HK等）
+  return lang && lang.toLowerCase().startsWith('zh');
 }
 
 const images = [
@@ -557,8 +544,7 @@ const images = [
     "The answer will find you in a different form."
   ]
   };
-    
-  // 修改后的 updateContent 函数，支持根据 IP 地址自动切换中英文
+    // 修改后的 updateContent 函数，支持根据浏览器语言自动切换中英文
   async function updateContent() {
     const imgObj = images[Math.floor(Math.random() * images.length)];
     const bg = document.getElementById('bg');
@@ -576,19 +562,15 @@ const images = [
       bg.style.backgroundImage = `url('${fullImg}')`;
     };
   
-    // 获取用户国家代码并选择对应的语言
-    const countryCode = await getUserCountry();
-    const useChinese = shouldUseChinese(countryCode);
+    // 只用浏览器语言判断是否用中文
+    const useChinese = shouldUseChineseByLang();
     const selectedQuotes = useChinese ? quotes.zh : quotes.en;
-    
     // 随机选择一条语录
     const quote = selectedQuotes[Math.floor(Math.random() * selectedQuotes.length)];
-    
     // 显示语录
     document.getElementById('quote').textContent = `" ${quote} "`;
-    
-    // 调试信息（可选，生产环境可以删除）
-    console.log(`用户国家代码: ${countryCode}, 使用语言: ${useChinese ? '中文' : '英文'}`);
+    // 调试信息（可选）
+    console.log(`浏览器语言: ${navigator.language}, 使用语言: ${useChinese ? '中文' : '英文'}`);
   }
   
   // 时间戳格式化
